@@ -75,8 +75,15 @@ function SpaceShip() {
       const ay = Math.sin(angle) * thrust;
       vx += ax;
       vy += ay;
-      ship.x += vx;
-      ship.y += vy;
+
+      if (Math.abs(vx) > 0.01) {
+        vx *= 0.994;
+        ship.x += vx;
+      }
+      if (Math.abs(vy) > 0.01) {
+        vy *= 0.994;
+        ship.y += vy;
+      }
       speed = Math.sqrt(vx * vx + vy * vy);
 
       // screen wrapping
