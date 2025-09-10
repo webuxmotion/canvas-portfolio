@@ -1,0 +1,18 @@
+.header {
+    padding: 20px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-flex;
+    flex-direction: column;
+
+    span {
+        &:nth-child(2) {
+            font-size: 20px;
+            font-weight: normal;
+        }
+    }
+}
