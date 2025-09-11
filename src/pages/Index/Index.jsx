@@ -7,8 +7,8 @@ function Index() {
   return (
     <div className={styles.grid}>
       {animations.map((el) => (
-        <div className={styles.card}>
-          <Link key={el.id} to={el.id} className={styles.link}>
+        <div key={el.id} className={styles.card}>
+          <Link to={el.id} className={styles.link}>
             <div className={styles.videoWrapper}>
               <video
                 src={`videos/animations/${el.id}.mp4`}

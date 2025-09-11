@@ -6,6 +6,7 @@ import Index from "./pages/Index/Index";
 import SpaceShip from "./pages/SpaceShip/SpaceShip";
 import WaterFire from "./pages/WaterFire/WaterFire";
 import Example from "./pages/Example/Example";
+import Perspective from "./pages/Perspective/Perspective";
 
 export const animations = [
   {
@@ -27,6 +28,11 @@ export const animations = [
     id: "water-fire",       
     component: WaterFire,
     codeSource: "WaterFire"
+  },
+  {
+    id: "perspective",       
+    component: Perspective,
+    codeSource: "Perspective"
   },
 ];
 
