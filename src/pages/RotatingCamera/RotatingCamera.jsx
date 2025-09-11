@@ -105,3 +105,10 @@ function pointSide(x1, y1, x2, y2, px, py) {
   else if (cross < 0) return "right"; // mouse is on the right side
   else return "on the line"; // exactly on the line
 }
+
+function midpoint(p1, p2) {
+  return {
+    x: (p1.x + p2.x) / 2,
+    y: (p1.y + p2.y) / 2,
+  };
+}
