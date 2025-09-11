@@ -8,6 +8,7 @@ import WaterFire from "./pages/WaterFire/WaterFire";
 import Example from "./pages/Example/Example";
 import Perspective from "./pages/Perspective/Perspective";
 import CubeWalk from "./pages/CubeWalk/CubeWalk";
+import RotatingCamera from "./pages/RotatingCamera/RotatingCamera";
 
 export const animations = [
   {
@@ -39,6 +40,11 @@ export const animations = [
     id: "cube-walk",       
     component: CubeWalk,
     codeSource: "CubeWalk"
+  },
+  {
+    id: "rotating-camera",       
+    component: RotatingCamera,
+    codeSource: "RotatingCamera"
   },
 ];
 
