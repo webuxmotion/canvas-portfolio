@@ -11,18 +11,22 @@ export const animations = [
   {
     id: "example",       
     component: Example,
+    codeSource: "Example"
   },
   {
     id: "bouncing-ball",       
     component: BouncingBall,
+    codeSource: "BouncingBall"
   },
   {
     id: "space-ship",       
     component: SpaceShip,
+    codeSource: "SpaceShip"
   },
   {
     id: "water-fire",       
     component: WaterFire,
+    codeSource: "WaterFire"
   },
 ];
 
