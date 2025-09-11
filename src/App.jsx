@@ -4,8 +4,14 @@ import { Route, Routes } from "react-router-dom";
 import BouncingBall from "./pages/BouncingBall/BouncingBall";
 import Index from "./pages/Index/Index";
 import SpaceShip from "./pages/SpaceShip/SpaceShip";
+import WaterFire from "./pages/WaterFire/WaterFire";
+import Example from "./pages/Example/Example";
 
 export const animations = [
+  {
+    id: "example",       
+    component: Example,
+  },
   {
     id: "bouncing-ball",       
     component: BouncingBall,
@@ -13,6 +19,10 @@ export const animations = [
   {
     id: "space-ship",       
     component: SpaceShip,
+  },
+  {
+    id: "water-fire",       
+    component: WaterFire,
   },
 ];
 

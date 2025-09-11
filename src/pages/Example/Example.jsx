@@ -1,0 +1,36 @@
+import { useRef, useEffect } from "react";
+import Canvas from "../../components/Canvas/Canvas";
+
+export default function Example() {
+  const canvasRef = useRef(null);
+
+  let animationFrameId;
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+
+    let x = canvas.width / 2;
+
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      ctx.beginPath();
+      ctx.fillStyle = "white";
+      ctx.arc(x, canvas.height / 2, 20, 0, Math.PI * 2);
+      ctx.fill();
+      
+      x += 1;
+
+      animationFrameId = requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
+
+  return <Canvas ref={canvasRef} width={500} height={500} />;
+}
