@@ -7,6 +7,7 @@ import SpaceShip from "./pages/SpaceShip/SpaceShip";
 import WaterFire from "./pages/WaterFire/WaterFire";
 import Example from "./pages/Example/Example";
 import Perspective from "./pages/Perspective/Perspective";
+import CubeWalk from "./pages/CubeWalk/CubeWalk";
 
 export const animations = [
   {
@@ -33,6 +34,11 @@ export const animations = [
     id: "perspective",       
     component: Perspective,
     codeSource: "Perspective"
+  },
+  {
+    id: "cube-walk",       
+    component: CubeWalk,
+    codeSource: "CubeWalk"
   },
 ];
 
