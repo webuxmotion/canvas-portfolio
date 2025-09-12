@@ -23,7 +23,7 @@ export function pointSide(x1, y1, x2, y2, px, py) {
   else return "on the line"; // exactly on the line
 }
 
-export function transformPoint(p, camera, fl, vpX, vpY) {
+export function transformPoint(p, camera) {
   const closest = closestPointOnLine(
     camera.p1.x,
     camera.p1.z,
@@ -59,10 +59,5 @@ export function transformPoint(p, camera, fl, vpX, vpY) {
     z: distanceForZ,
   };
 
-  const scale = fl / (fl + newPoint.z);
-  return {
-    x: vpX + newPoint.x * scale,
-    y: vpY + (newPoint.y + camera.y) * scale,
-    z: newPoint.z,
-  };
+  return newPoint;
 }
