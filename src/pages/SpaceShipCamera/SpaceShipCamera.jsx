@@ -97,6 +97,8 @@ export default function SpaceShipCamera() {
         z: camera.z + Math.sin(camAngle - Math.PI / 2) * 250,
       };
 
+      const objectsToDraw = [];
+
       points.forEach((point) => {
         const closest = closestPointOnLine(
           camera.p1.x,
@@ -143,9 +145,12 @@ export default function SpaceShipCamera() {
           ball.y = vpY + (newPoint.y + camera.y) * scale;
           ball.color = `hsl(150, 100%, ${scale * 100}%)`;
 
-          ball.draw(ctx);
+          objectsToDraw.push({ ball, z: newPoint.z });
         }
       });
+
+      objectsToDraw.sort((a, b) => b.z - a.z);
+      objectsToDraw.forEach(({ ball }) => ball.draw(ctx));
 
       camAngle += vr;
 
