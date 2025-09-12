@@ -13,6 +13,7 @@ import MoveCamera from "./pages/MoveCamera/MoveCamera";
 import SpaceShipCamera from "./pages/SpaceShipCamera/SpaceShipCamera";
 import ColorSphere from "./pages/ColorSphere/ColorSphere";
 import Strawberry from "./pages/Strawberry/Strawberry";
+import VideoInSphere from "./pages/VideoInSphere/VideoInSphere";
 
 export const animations = [
   {
@@ -69,6 +70,11 @@ export const animations = [
     id: "strawberry",       
     component: Strawberry,
     codeSource: "Strawberry"
+  },
+  {
+    id: "video-in-sphere",       
+    component: VideoInSphere,
+    codeSource: "VideoInSphere"
   },
 ];
 
