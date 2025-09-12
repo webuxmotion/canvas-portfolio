@@ -23,44 +23,7 @@ export function pointSide(x1, y1, x2, y2, px, py) {
   else return "on the line"; // exactly on the line
 }
 
-export function generatePoints(count = 1000, radius = 1000) {
-  const points = [];
-
-  for (let i = 0; i < count; i++) {
-    const h = Math.random() * 255;
-    const theta = Math.acos(2 * Math.random() - 1); // polar angle
-    const phi = Math.random() * Math.PI * 2;        // azimuth angle
-
-    points.push({
-      theta,
-      phi,
-      radius,
-      speedTheta: (Math.random() - 0.5) * 0.001,
-      speedPhi: (Math.random() - 0.5) * 0.001,
-      h,
-    });
-  }
-
-  return points;
-}
-
-export function updatePoints(points) {
-  for (const p of points) {
-    p.theta += p.speedTheta;
-    p.phi += p.speedPhi;
-
-    if (p.theta < 0) p.theta += Math.PI;
-    if (p.theta > Math.PI) p.theta -= Math.PI;
-    if (p.phi < 0) p.phi += Math.PI * 2;
-    if (p.phi > Math.PI * 2) p.phi -= Math.PI * 2;
-
-    p.x = p.radius * Math.sin(p.theta) * Math.cos(p.phi);
-    p.y = p.radius * Math.sin(p.theta) * Math.sin(p.phi);
-    p.z = 1500 + p.radius * Math.cos(p.theta);
-  }
-}
-
-export function transformPoint(p, camera) {
+export function transformPoint(p, camera, fl, vpX, vpY) {
   const closest = closestPointOnLine(
     camera.p1.x,
     camera.p1.z,
@@ -96,5 +59,10 @@ export function transformPoint(p, camera) {
     z: distanceForZ,
   };
 
-  return newPoint;
+  const scale = fl / (fl + newPoint.z);
+  return {
+    x: vpX + newPoint.x * scale,
+    y: vpY + (newPoint.y + camera.y) * scale,
+    z: newPoint.z,
+  };
 }
