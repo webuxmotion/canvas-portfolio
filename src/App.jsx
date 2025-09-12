@@ -10,6 +10,7 @@ import Perspective from "./pages/Perspective/Perspective";
 import CubeWalk from "./pages/CubeWalk/CubeWalk";
 import RotatingCamera from "./pages/RotatingCamera/RotatingCamera";
 import MoveCamera from "./pages/MoveCamera/MoveCamera";
+import SpaceShipCamera from "./pages/SpaceShipCamera/SpaceShipCamera";
 
 export const animations = [
   {
@@ -51,6 +52,11 @@ export const animations = [
     id: "move-camera",       
     component: MoveCamera,
     codeSource: "MoveCamera"
+  },
+  {
+    id: "space-ship-camera",       
+    component: SpaceShipCamera,
+    codeSource: "SpaceShipCamera"
   },
 ];
 
