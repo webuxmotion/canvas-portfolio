@@ -11,6 +11,8 @@ import CubeWalk from "./pages/CubeWalk/CubeWalk";
 import RotatingCamera from "./pages/RotatingCamera/RotatingCamera";
 import MoveCamera from "./pages/MoveCamera/MoveCamera";
 import SpaceShipCamera from "./pages/SpaceShipCamera/SpaceShipCamera";
+import ColorSphere from "./pages/ColorSphere/ColorSphere";
+import Strawberry from "./pages/Strawberry/Strawberry";
 
 export const animations = [
   {
@@ -57,6 +59,16 @@ export const animations = [
     id: "space-ship-camera",       
     component: SpaceShipCamera,
     codeSource: "SpaceShipCamera"
+  },
+  {
+    id: "color-sphere",       
+    component: ColorSphere,
+    codeSource: "ColorSphere"
+  },
+  {
+    id: "strawberry",       
+    component: Strawberry,
+    codeSource: "Strawberry"
   },
 ];
 
