@@ -2,6 +2,7 @@ import Example from "./Example/Example";
 import LinesAndBalls from "./LinesAndBalls/LinesAndBalls";
 import LinesAndPoints from "./LinesAndPoints/LinesAndPoints";
 import Matrices from "./Matrices/Matrices";
+import NormalToPlane from "./NormalToPlane/NormalToPlane";
 import RotateCamera from "./RotateCamera/RotateCamera";
 import Square from "./Square/Square";
 
@@ -29,5 +30,9 @@ export const animationsList = [
     {
         id: "matrices",
         component: Matrices
+    },
+    {
+        id: "normal-to-plane",
+        component: NormalToPlane
     },
 ];
