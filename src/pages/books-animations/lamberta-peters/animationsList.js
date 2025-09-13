@@ -1,6 +1,7 @@
 import Example from "./Example/Example";
 import LinesAndBalls from "./LinesAndBalls/LinesAndBalls";
 import LinesAndPoints from "./LinesAndPoints/LinesAndPoints";
+import Matrices from "./Matrices/Matrices";
 import RotateCamera from "./RotateCamera/RotateCamera";
 import Square from "./Square/Square";
 
@@ -24,5 +25,9 @@ export const animationsList = [
     {
         id: "square",
         component: Square
+    },
+    {
+        id: "matrices",
+        component: Matrices
     },
 ];
