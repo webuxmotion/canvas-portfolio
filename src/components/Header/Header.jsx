@@ -8,6 +8,7 @@ function Header() {
         <span>Canvas portfolio </span>
         <span>by Andrii Pereverziev</span>
       </Link>
+      <Link to="/books-animations" className={styles.link}>Books Animations</Link>
     </div>
   );
 }
