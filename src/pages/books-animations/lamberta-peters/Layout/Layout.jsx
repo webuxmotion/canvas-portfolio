@@ -1,24 +1,28 @@
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { animationsList } from "../animationsList";
+import styles from './Layout.module.scss';
 
-export default function LambertaPetersLayout() {
+export default function Layout() {
   return (
-    <div>
+    <div className={styles.layout}>
       <h1>Based on "Foundation HTML5 Animation with JavaScript" animations:</h1>
       <div style={{ display: "flex" }}>
         {/* Example: sidebar or navigation */}
-        <aside
-          style={{ width: "200px", background: "#f4f4f4", padding: "1rem" }}
-        >
+        <aside className={styles.sidebar}>
           <h3>Books Animations</h3>
           <ul>
             {animationsList.map((item) => (
               <li key={item.id}>
-                <Link
+                <NavLink
                   to={`/books-animations/based-on/labmerta-peters/${item.id}`}
+                  style={({ isActive }) => ({
+                    fontWeight: isActive ? "bold" : "normal",
+                    color: isActive ? "#9aa3edff" : "#7179c5",
+                    textDecoration: "none",
+                  })}
                 >
                   {item.id}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>
