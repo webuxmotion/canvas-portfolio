@@ -2,6 +2,7 @@ import Example from "./Example/Example";
 import LinesAndBalls from "./LinesAndBalls/LinesAndBalls";
 import LinesAndPoints from "./LinesAndPoints/LinesAndPoints";
 import RotateCamera from "./RotateCamera/RotateCamera";
+import Square from "./Square/Square";
 
 export const animationsList = [
     {
@@ -19,5 +20,9 @@ export const animationsList = [
     {
         id: "rotate-camera",
         component: RotateCamera
-    }
+    },
+    {
+        id: "square",
+        component: Square
+    },
 ];

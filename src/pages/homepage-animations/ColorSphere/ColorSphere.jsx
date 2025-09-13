@@ -53,7 +53,7 @@ export default function ColorSphere() {
       objectsToDraw.sort((a, b) => b.z - a.z);
       objectsToDraw.forEach(({ ball }) => ball.draw(ctx));
 
-      camera.update(camera);
+      camera.update();
 
       animationFrameId = requestAnimationFrame(animate);
     };
