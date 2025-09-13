@@ -5,11 +5,11 @@ import styles from './Layout.module.scss';
 export default function Layout() {
   return (
     <div className={styles.layout}>
-      <h1>Based on "Foundation HTML5 Animation with JavaScript" animations:</h1>
+      <h1>Based on "Foundation HTML5 Animation with JavaScript" book:</h1>
       <div style={{ display: "flex" }}>
         {/* Example: sidebar or navigation */}
         <aside className={styles.sidebar}>
-          <h3>Books Animations</h3>
+          <h3>Animations:</h3>
           <ul>
             {animationsList.map((item) => (
               <li key={item.id}>
