@@ -24,7 +24,7 @@ function Index() {
           {el?.codeSource && (
             <a
               className={styles.externalLink}
-              href={`https://github.com/webuxmotion/canvas-portfolio/tree/main/src/pages/${el.codeSource}`}
+              href={`https://github.com/webuxmotion/canvas-portfolio/tree/main/src/pages/homepage-animations/${el.codeSource}`}
               target="_blank"
             >
               <GithubIcon />
