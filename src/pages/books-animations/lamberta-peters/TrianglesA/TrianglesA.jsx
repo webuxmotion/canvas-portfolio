@@ -17,7 +17,8 @@ export default function TrianglesA() {
       vpX = canvas.width / 2,
       vpY = canvas.height / 2,
       angleX = 0,
-      angleY = -0.01;
+      angleY = 0.01,
+      angleZ = 0;
 
     points[0] = new Point3d(-50, -250, 100);
     points[1] = new Point3d(50, -250, 100);
@@ -49,8 +50,7 @@ export default function TrianglesA() {
     triangles[10] = new Triangle(points[0], points[8], points[10], "#54B1F9");
 
     function move(point) {
-      point.rotateX(angleX);
-      point.rotateY(angleY);
+      point.rotate(angleX, angleY, angleZ);
     }
 
     function draw(triangle) {
