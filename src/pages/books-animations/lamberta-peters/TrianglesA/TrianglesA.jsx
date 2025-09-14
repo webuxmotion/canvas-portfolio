@@ -36,7 +36,7 @@ export default function TrianglesA() {
       point.setCenter(0, 0, 100);
     });
 
-    triangles[0] = new Triangle(points[0], points[1], points[8], "#54B1F9");
+    triangles[0] = new Triangle(points[0], points[1], points[8], "#4BA75E");
     triangles[1] = new Triangle(points[1], points[9], points[8], "#54B1F9");
     triangles[2] = new Triangle(points[1], points[2], points[9], "#54B1F9");
     triangles[3] = new Triangle(points[2], points[4], points[9], "#54B1F9");

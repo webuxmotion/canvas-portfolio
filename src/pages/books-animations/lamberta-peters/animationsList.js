@@ -1,3 +1,4 @@
+import Cube from "./Cube/Cube";
 import Example from "./Example/Example";
 import LinesAndBalls from "./LinesAndBalls/LinesAndBalls";
 import LinesAndPoints from "./LinesAndPoints/LinesAndPoints";
@@ -44,5 +45,9 @@ export const animationsList = [
     {
         id: "triangles-a",
         component: TrianglesA
+    },
+    {
+        id: "cube",
+        component: Cube
     },
 ];
