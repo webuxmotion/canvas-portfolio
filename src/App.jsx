@@ -21,6 +21,7 @@ const {
   Strawberry,
   VideoInSphere,
   Bounce3D,
+  CircleInArray,
 } = homepageAnimations;
 
 export const animations = [
@@ -49,6 +50,7 @@ export const animations = [
     codeSource: "VideoInSphere",
   },
   { id: "bounce-3d", component: Bounce3D, codeSource: "Bounce3D" },
+  { id: "circle-in-array", component: CircleInArray, codeSource: "Bounce3D" },
 ];
 
 function App() {
