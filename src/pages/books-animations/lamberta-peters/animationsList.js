@@ -1,9 +1,11 @@
 import Cube from "./Cube/Cube";
 import Example from "./Example/Example";
+import ExtrudedA from "./ExtrudedA/ExtrudedA";
 import LinesAndBalls from "./LinesAndBalls/LinesAndBalls";
 import LinesAndPoints from "./LinesAndPoints/LinesAndPoints";
 import Matrices from "./Matrices/Matrices";
 import NormalToPlane from "./NormalToPlane/NormalToPlane";
+import Pyramid from "./Pyramid/Pyramid";
 import RotateCamera from "./RotateCamera/RotateCamera";
 import SpinningE from "./SpinningE/SpinningE";
 import Square from "./Square/Square";
@@ -49,5 +51,13 @@ export const animationsList = [
     {
         id: "cube",
         component: Cube
+    },
+    {
+        id: "pyramid",
+        component: Pyramid
+    },
+    {
+        id: "extruded-a",
+        component: ExtrudedA
     },
 ];
