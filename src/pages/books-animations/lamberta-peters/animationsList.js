@@ -4,7 +4,9 @@ import LinesAndPoints from "./LinesAndPoints/LinesAndPoints";
 import Matrices from "./Matrices/Matrices";
 import NormalToPlane from "./NormalToPlane/NormalToPlane";
 import RotateCamera from "./RotateCamera/RotateCamera";
+import SpinningE from "./SpinningE/SpinningE";
 import Square from "./Square/Square";
+import TrianglesA from "./TrianglesA/TrianglesA";
 
 export const animationsList = [
     {
@@ -34,5 +36,13 @@ export const animationsList = [
     {
         id: "normal-to-plane",
         component: NormalToPlane
+    },
+    {
+        id: "spinning-e",
+        component: SpinningE
+    },
+    {
+        id: "triangles-a",
+        component: TrianglesA
     },
 ];
