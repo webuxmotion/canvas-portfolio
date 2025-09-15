@@ -13,6 +13,7 @@ import RotateAround from "./RotateAround/RotateAround";
 import RotateCamera from "./RotateCamera/RotateCamera";
 import SimpleEasing from "./SimpleEasing/SimpleEasing";
 import SpinningE from "./SpinningE/SpinningE";
+import Springing from "./Springing/Springing";
 import Square from "./Square/Square";
 import TrianglesA from "./TrianglesA/TrianglesA";
 
@@ -84,5 +85,10 @@ export const animationsList = [
     {
         id: "ease-to-moving-target",
         component: EaseToMovingTarget
-    }
+    },
+    {
+        id: "springing",
+        component: Springing
+    },
+    
 ];
