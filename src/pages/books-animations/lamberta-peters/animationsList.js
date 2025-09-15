@@ -1,5 +1,6 @@
 import Cube from "./Cube/Cube";
 import Cylinder from "./Cylinder/Cylinder";
+import DraggingAndEasing from "./DraggingAndEasing/DraggingAndEasing";
 import Example from "./Example/Example";
 import ExtrudedA from "./ExtrudedA/ExtrudedA";
 import LinesAndBalls from "./LinesAndBalls/LinesAndBalls";
@@ -9,6 +10,7 @@ import NormalToPlane from "./NormalToPlane/NormalToPlane";
 import Pyramid from "./Pyramid/Pyramid";
 import RotateAround from "./RotateAround/RotateAround";
 import RotateCamera from "./RotateCamera/RotateCamera";
+import SimpleEasing from "./SimpleEasing/SimpleEasing";
 import SpinningE from "./SpinningE/SpinningE";
 import Square from "./Square/Square";
 import TrianglesA from "./TrianglesA/TrianglesA";
@@ -69,5 +71,13 @@ export const animationsList = [
     {
         id: "rotate-around",
         component: RotateAround
+    },
+    {
+        id: "simple-easing",
+        component: SimpleEasing
+    },
+    {
+        id: "dragging-and-easing",
+        component: DraggingAndEasing
     },
 ];
