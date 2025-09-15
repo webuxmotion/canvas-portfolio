@@ -24,7 +24,7 @@ export default function SimpleEasing() {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      var vx = (targetX - ball.x) * easing,
+      let vx = (targetX - ball.x) * easing,
         vy = (targetY - ball.y) * easing;
 
       if (vx < 0.01 && vx > -0.01) {

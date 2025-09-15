@@ -1,6 +1,7 @@
 import Cube from "./Cube/Cube";
 import Cylinder from "./Cylinder/Cylinder";
 import DraggingAndEasing from "./DraggingAndEasing/DraggingAndEasing";
+import EaseToMovingTarget from "./EaseToMovingTarget/EaseToMovingTarget";
 import Example from "./Example/Example";
 import ExtrudedA from "./ExtrudedA/ExtrudedA";
 import LinesAndBalls from "./LinesAndBalls/LinesAndBalls";
@@ -80,4 +81,8 @@ export const animationsList = [
         id: "dragging-and-easing",
         component: DraggingAndEasing
     },
+    {
+        id: "ease-to-moving-target",
+        component: EaseToMovingTarget
+    }
 ];
