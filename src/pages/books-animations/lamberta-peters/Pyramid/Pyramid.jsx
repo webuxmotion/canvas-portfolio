@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 import { Triangle } from "../lib/Triangle";
 import { Point3d } from "../lib/Point3d";
 
-export default function Pyramid() {
+export default function Pyramid({ size = 500 }) {
   const canvasRef = useRef(null);
 
   let animationFrameId;
@@ -63,5 +63,5 @@ export default function Pyramid() {
     };
   }, []);
 
-  return <Canvas ref={canvasRef} width={500} height={500} />;
+  return <Canvas ref={canvasRef} width={size} height={size} />;
 }

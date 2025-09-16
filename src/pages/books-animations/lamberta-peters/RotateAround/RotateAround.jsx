@@ -2,7 +2,7 @@ import Canvas from "@/components/Canvas/Canvas";
 import { useRef, useEffect } from "react";
 import { generatePoints, generateTriangles } from "./utils";
 
-export default function RotateAround() {
+export default function RotateAround({ size = 500 }) {
   const canvasRef = useRef(null);
 
   let animationFrameId;
@@ -102,7 +102,7 @@ export default function RotateAround() {
 
   return (
     <div style={{ textAlign: "center" }}>
-      <Canvas ref={canvasRef} width={500} height={500} />
+      <Canvas ref={canvasRef} width={size} height={size} />
       <button onClick={handleRotateClick}>Rotate around origin</button>
       <button onClick={handleRotateClick}>Rotate around self</button>
       <p>Use keys: "Left" and "Right" to move object</p>

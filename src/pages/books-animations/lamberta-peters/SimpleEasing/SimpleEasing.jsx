@@ -2,7 +2,7 @@ import Canvas from "@/components/Canvas/Canvas";
 import { useRef, useEffect } from "react";
 import { Ball } from "../lib/Ball";
 
-export default function SimpleEasing() {
+export default function SimpleEasing({ size = 500 }) {
   const canvasRef = useRef(null);
 
   let animationFrameId;
@@ -45,5 +45,5 @@ export default function SimpleEasing() {
     };
   }, []);
 
-  return <Canvas ref={canvasRef} width={500} height={500} />;
+  return <Canvas ref={canvasRef} width={size} height={size} />;
 }

@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 import { Ball } from "../lib/Ball";
 import { useMouse } from "@/hooks/useMouse";
 
-export default function EaseToMovingTarget() {
+export default function EaseToMovingTarget({ size = 500 }) {
   const canvasRef = useRef(null);
   const mouse = useMouse(canvasRef);
 
@@ -69,5 +69,5 @@ export default function EaseToMovingTarget() {
     };
   }, []);
 
-  return <Canvas ref={canvasRef} width={500} height={500} />;
+  return <Canvas ref={canvasRef} width={size} height={size} />;
 }

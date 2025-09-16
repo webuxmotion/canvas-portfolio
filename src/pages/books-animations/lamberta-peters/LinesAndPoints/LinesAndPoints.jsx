@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 import { Point3D } from "./utils/Point3D";
 import { generatePoints } from "./utils/generatePoints";
 
-export default function LinesAndPoints() {
+export default function LinesAndPoints({ size = 500 }) {
   const canvasRef = useRef(null);
 
   let animationFrameId;
@@ -69,5 +69,5 @@ export default function LinesAndPoints() {
     };
   }, []);
 
-  return <Canvas ref={canvasRef} width={500} height={500} />;
+  return <Canvas ref={canvasRef} width={size} height={size} />;
 }

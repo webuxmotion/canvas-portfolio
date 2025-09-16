@@ -5,7 +5,7 @@ import { useMouse } from "@/hooks/useMouse";
 import { colors } from "../lib/colors";
 import { isBallContainsMouse } from "./utils";
 
-export default function DraggingAndEasing() {
+export default function DraggingAndEasing({ size = 500 }) {
   const canvasRef = useRef(null);
   const mouse = useMouse(canvasRef);
 
@@ -97,5 +97,5 @@ export default function DraggingAndEasing() {
     };
   }, []);
 
-  return <Canvas ref={canvasRef} width={500} height={500} />;
+  return <Canvas ref={canvasRef} width={size} height={size} />;
 }

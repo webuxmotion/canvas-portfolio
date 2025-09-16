@@ -6,7 +6,7 @@ import { disableKeysControl, initKeysControl } from "./utils/keysControl";
 import { Ball3D } from "./utils/Ball3D";
 import { getRelativeCoords } from "./utils/utils";
 
-export default function RotateCamera() {
+export default function RotateCamera({ size = 500 }) {
   const canvasRef = useRef(null);
 
   let animationFrameId;
@@ -123,5 +123,5 @@ export default function RotateCamera() {
     };
   }, []);
 
-  return <Canvas ref={canvasRef} width={500} height={500} />;
+  return <Canvas ref={canvasRef} width={size} height={size} />;
 }

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./Index.module.scss";
 import GithubIcon from "./GithubIcon";
 import Books from "../Books/Books";
+import { animationsList } from "../books-animations/lamberta-peters/animationsList";
 
 function Index() {
   return (
@@ -35,6 +36,18 @@ function Index() {
           </div>
         ))}
       </div>
+
+      <div className={styles.booksAnimations}>
+        {animationsList.map((el, idx) => {
+          return (
+            <div key={idx}>
+              <el.component size={200} />
+              <Link to={`/books-animations/based-on/labmerta-peters/${el.id}`}>{el.id}</Link>
+            </div>
+          );
+        })}
+      </div>
+
       <Books />
     </div>
   );

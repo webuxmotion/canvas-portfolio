@@ -4,7 +4,7 @@ import { Point3d } from "./Point3d";
 import { Triangle } from "./Triangle";
 import utils from "./utils";
 
-export default function Cube() {
+export default function Cube({ size = 500 }) {
   const canvasRef = useRef(null);
 
   let animationFrameId;
@@ -83,5 +83,5 @@ export default function Cube() {
     };
   }, []);
 
-  return <Canvas ref={canvasRef} width={500} height={500} />;
+  return <Canvas ref={canvasRef} width={size} height={size} />;
 }

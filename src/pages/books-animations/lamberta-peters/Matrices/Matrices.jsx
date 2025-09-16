@@ -2,7 +2,7 @@ import Canvas from "@/components/Canvas/Canvas";
 import { useRef, useEffect } from "react";
 import { disableKeysControl, initKeysControl } from "./keysControl";
 
-export default function Matrices() {
+export default function Matrices({ size = 500 }) {
   const canvasRef = useRef(null);
 
   // --- Math helpers ---
@@ -185,5 +185,5 @@ export default function Matrices() {
     };
   }, []);
 
-  return <Canvas ref={canvasRef} width={500} height={500} />;
+  return <Canvas ref={canvasRef} width={size} height={size} />;
 }

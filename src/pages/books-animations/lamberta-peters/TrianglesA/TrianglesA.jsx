@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 import { Point3d } from "./Point3d";
 import { Triangle } from "./Triangle";
 
-export default function TrianglesA() {
+export default function TrianglesA({ size = 500 }) {
   const canvasRef = useRef(null);
 
   let animationFrameId;
@@ -73,5 +73,5 @@ export default function TrianglesA() {
     };
   }, []);
 
-  return <Canvas ref={canvasRef} width={500} height={500} />;
+  return <Canvas ref={canvasRef} width={size} height={size} />;
 }

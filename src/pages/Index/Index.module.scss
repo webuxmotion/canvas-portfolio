@@ -4,6 +4,12 @@
   gap: 16px;
 }
 
+.booksAnimations {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
 .card {
   display: block;
   text-decoration: none;

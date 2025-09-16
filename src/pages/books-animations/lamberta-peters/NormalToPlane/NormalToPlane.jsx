@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 import { Ball } from "./Ball";
 import { disableKeysControl, initKeysControl } from "./keysControl";
 
-export default function NormalToPlane() {
+export default function NormalToPlane({ size = 500 }) {
   const canvasRef = useRef(null);
 
   let animationFrameId;
@@ -134,5 +134,5 @@ export default function NormalToPlane() {
     };
   }, []);
 
-  return <Canvas ref={canvasRef} width={500} height={500} />;
+  return <Canvas ref={canvasRef} width={size} height={size} />;
 }

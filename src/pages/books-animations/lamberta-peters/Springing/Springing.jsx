@@ -3,7 +3,7 @@ import { useRef, useEffect } from "react";
 import { Ball } from "../lib/Ball";
 import { useMouse } from "@/hooks/useMouse";
 
-export default function Springing() {
+export default function Springing({ size = 500 }) {
   const canvasRef = useRef(null);
   const mouse = useMouse(canvasRef);
 
@@ -104,7 +104,7 @@ export default function Springing() {
 
   return (
     <div style={{ textAlign: "center" }}>
-      <Canvas ref={canvasRef} width={500} height={500} />
+      <Canvas ref={canvasRef} width={size} height={size} />
       <button onClick={handleToggleGravityClick}>Toggle gravity</button>
     </div>
   );

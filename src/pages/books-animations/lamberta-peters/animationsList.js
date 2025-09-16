@@ -6,8 +6,10 @@ import Example from "./Example/Example";
 import ExtrudedA from "./ExtrudedA/ExtrudedA";
 import LinesAndBalls from "./LinesAndBalls/LinesAndBalls";
 import LinesAndPoints from "./LinesAndPoints/LinesAndPoints";
+import ManySprings from "./ManySprings/ManySprings";
 import Matrices from "./Matrices/Matrices";
 import MultipleSprings from "./MultipleSprings/MultipleSprings";
+import MultipleTargets from "./MultipleTargets/MultipleTargets";
 import NormalToPlane from "./NormalToPlane/NormalToPlane";
 import Pyramid from "./Pyramid/Pyramid";
 import RotateAround from "./RotateAround/RotateAround";
@@ -95,5 +97,12 @@ export const animationsList = [
         id: "multiple-springs",
         component: MultipleSprings
     },
-    
+    {
+        id: "many-springs",
+        component: ManySprings
+    },
+    {
+        id: "multiple-targets",
+        component: MultipleTargets
+    },
 ];

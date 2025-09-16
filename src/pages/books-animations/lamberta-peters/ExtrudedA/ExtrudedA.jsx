@@ -2,7 +2,7 @@ import Canvas from "@/components/Canvas/Canvas";
 import { useRef, useEffect } from "react";
 import { generatePoints, generateTriangles } from "./utils";
 
-export default function ExtrudedA() {
+export default function ExtrudedA({ size = 500 }) {
   const canvasRef = useRef(null);
 
   let animationFrameId;
@@ -49,5 +49,5 @@ export default function ExtrudedA() {
     };
   }, []);
 
-  return <Canvas ref={canvasRef} width={500} height={500} />;
+  return <Canvas ref={canvasRef} width={size} height={size} />;
 }

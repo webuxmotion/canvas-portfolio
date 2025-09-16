@@ -2,7 +2,7 @@ import Canvas from "@/components/Canvas/Canvas";
 import { useRef, useEffect } from "react";
 import { generateBox } from "./utils/generateBox";
 
-export default function LinesAndBalls() {
+export default function LinesAndBalls({ size = 500 }) {
   const canvasRef = useRef(null);
 
   let animationFrameId;
@@ -83,5 +83,5 @@ export default function LinesAndBalls() {
     };
   }, []);
 
-  return <Canvas ref={canvasRef} width={500} height={500} />;
+  return <Canvas ref={canvasRef} width={size} height={size} />;
 }
