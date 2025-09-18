@@ -30,9 +30,9 @@ function keyHandler({ camera }) {
   if ((!keys.ArrowUp && !keys.ArrowDown) || (keys.ArrowUp && keys.ArrowDown)) {
     camera.thrust = 0;
   } else if (keys.ArrowUp) {
-    camera.thrust = -1000;
+    camera.thrust = -2000;
   } else if (keys.ArrowDown) {
-    camera.thrust = 1000;
+    camera.thrust = 2000;
   }
 }
 

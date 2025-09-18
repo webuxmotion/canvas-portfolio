@@ -43,32 +43,31 @@ export function generatePoints(rows = 30, cols = 30) {
     }
   }
 
-  points.forEach(point => {
-
+  points.forEach((point) => {
     const l1 = [
       {
         x: point.x - halfStep,
         y: 0,
-        z: point.z
+        z: point.z,
       },
       {
         x: point.x + halfStep,
         y: 0,
-        z: point.z
-      }
+        z: point.z,
+      },
     ];
 
     const l2 = [
       {
         x: point.x,
         y: 0,
-        z: point.z - halfStep
+        z: point.z - halfStep,
       },
       {
         x: point.x,
         y: 0,
-        z: point.z + halfStep
-      }
+        z: point.z + halfStep,
+      },
     ];
 
     crosses.push([...l1, ...l2, point]);
@@ -91,6 +90,18 @@ export function updatePoints(points) {
     p.y = p.radius * Math.sin(p.theta) * Math.sin(p.phi);
     p.z = 1500 + p.radius * Math.cos(p.theta);
   }
+}
+
+export function projectPoint(p, camera, vpX, vpY) {
+  const scale = camera.fl / (camera.fl + p.z);
+
+  const pp = {
+    x2d: vpX + p.x * scale,
+    y2d: vpY + (p.y + camera.y) * scale,
+    scale,
+  };
+
+  return pp;
 }
 
 export function transformPoint(p, camera) {

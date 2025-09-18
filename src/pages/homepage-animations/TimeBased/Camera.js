@@ -9,6 +9,7 @@ export class Camera {
     this.x = 0;
     this.y = 0;
     this.z = 0;
+    this.fl = 300;
     this.friction = 0.982;
 
     this._halfWidth = 250;
