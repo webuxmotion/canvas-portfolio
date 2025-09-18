@@ -1,3 +1,4 @@
+
 import Cube from "./Cube/Cube";
 import Cylinder from "./Cylinder/Cylinder";
 import DraggingAndEasing from "./DraggingAndEasing/DraggingAndEasing";
@@ -104,5 +105,5 @@ export const animationsList = [
     {
         id: "multiple-targets",
         component: MultipleTargets
-    },
+    }
 ];

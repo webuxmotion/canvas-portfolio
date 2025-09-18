@@ -22,6 +22,7 @@ const {
   VideoInSphere,
   Bounce3D,
   CircleInArray,
+  TimeBased,
 } = homepageAnimations;
 
 export const animations = [
@@ -51,6 +52,7 @@ export const animations = [
   },
   { id: "bounce-3d", component: Bounce3D, codeSource: "Bounce3D" },
   { id: "circle-in-array", component: CircleInArray, codeSource: "Bounce3D" },
+  { id: "time-based", component: TimeBased, codeSource: "TimeBased" },
 ];
 
 function App() {

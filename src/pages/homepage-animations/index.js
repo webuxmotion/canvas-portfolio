@@ -13,6 +13,7 @@ import Strawberry from "./Strawberry/Strawberry";
 import VideoInSphere from "./VideoInSphere/VideoInSphere";
 import Bounce3D from "./Bounce3D/Bounce3D";
 import CircleInArray from "./CircleInArray/CircleInArray";
+import TimeBased from "./TimeBased/TimeBased";
 
 const homepageAnimations = {
   BouncingBall,
@@ -28,7 +29,8 @@ const homepageAnimations = {
   Strawberry,
   VideoInSphere,
   Bounce3D,
-  CircleInArray
+  CircleInArray,
+  TimeBased
 };
 
 export default homepageAnimations;
