@@ -5,6 +5,7 @@ import { initKeysControl } from "./keysControl";
 import { Grid } from "./Grid";
 import { Bounce } from "./Bounce";
 import { FPS } from "./FPS";
+import { Spring } from "./Spring";
 
 export default function TimeBased() {
   const canvasRef = useRef(null);
@@ -19,12 +20,14 @@ export default function TimeBased() {
     const fpsCounter = new FPS();
 
     const camera = new Camera();
+    camera.x = 1000;
     camera.y = 400;
-    camera.z = -200;
+    camera.z = -500;
     initKeysControl({ camera });
 
     const grid = new Grid();
     const bounce = new Bounce();
+    const spring = new Spring({ camera, vpX, vpY, ctx });
 
     let lastTime = performance.now();
 
@@ -43,6 +46,8 @@ export default function TimeBased() {
       bounce.sort();
       bounce.draw(ctx);
 
+      spring.animate(deltaTime);
+
       camera.update(deltaTime);
 
       fpsCounter.draw(ctx);
@@ -57,5 +62,5 @@ export default function TimeBased() {
     };
   }, []);
 
-  return <Canvas ref={canvasRef} width={500} height={500} />;
+  return <Canvas ref={canvasRef} width={1000} height={700} />;
 }
