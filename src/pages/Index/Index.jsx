@@ -37,17 +37,6 @@ function Index() {
         ))}
       </div>
 
-      <div className={styles.booksAnimations}>
-        {animationsList.map((el, idx) => {
-          return (
-            <div key={idx}>
-              <el.component size={200} />
-              <Link to={`/books-animations/based-on/labmerta-peters/${el.id}`}>{el.id}</Link>
-            </div>
-          );
-        })}
-      </div>
-
       <Books />
     </div>
   );
