@@ -8,6 +8,7 @@ export class Ball {
     this.ctx = ctx;
     this.radius = 300;
     this.steps = 50;
+    this.color = "white";
     this.vx = 0;
     this.vy = 0;
     this.vpX = vpX;
@@ -17,7 +18,7 @@ export class Ball {
     this.objects = [];
   }
 
-  animate({ ctx, deltaTime }) {
+  animate({ camera, vpX, vpY, ctx }) {
     this.points = this.genPoints();
 
     let tPoints = [];
@@ -46,6 +47,8 @@ export class Ball {
 
   draw({ ctx }) {
     ctx.beginPath();
+
+    console.log(this.color);
     if (this.objects.length > 0) {
       ctx.moveTo(this.objects[0].x2d, this.objects[0].y2d);
       for (let i = 1; i < this.objects.length; i++) {
@@ -53,7 +56,8 @@ export class Ball {
       }
       ctx.closePath(); // closes back to the first point
 
-      ctx.fillStyle = "white";
+      ctx.fillStyle = this.color;
+
       ctx.fill();
       ctx.stroke();
     }

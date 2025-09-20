@@ -1,7 +1,10 @@
+import { Ball } from "./lib/objects/Ball";
+
+
 export class Colors {
     constructor() {
         this.steps = {
-            h: 20,
+            h: 50,
             s: 10,
             l: 10
         };
@@ -15,8 +18,17 @@ export class Colors {
         this.colors = this.getColors();
     }
 
-    animate(props) {
-        
+    animate({ ctx, camera, vpX, vpY }) {
+
+        this.colors.forEach((color, idx) => {
+            const ball = new Ball({ ctx, camera, vpX, vpY });
+            ball.steps = 12;
+            ball.radius = 100;
+            ball.x = 3000 + -idx * 220;
+            ball.z = -1000;
+            ball.color = color;
+            ball.animate({ ctx});
+        });
     }
 
     getStepSizes() {
@@ -31,12 +43,13 @@ export class Colors {
 
     getColors() {
         const colors = [];
+
         for (let i = 0; i < this.steps.h; i++) {
             const h = i * this.stepSizes.h;
-            const color = `hsl(${h}, 100, 100)`;
+            const color = `hsl(${h}, 100%, 70%)`;
             colors.push(color);
         }
 
-        console.log(colors);
+        return colors;
     }
 }

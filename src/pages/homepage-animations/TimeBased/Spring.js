@@ -9,18 +9,20 @@ export class Spring {
     this.vpX = vpX;
     this.vpY = vpY;
     this.ctx = ctx;
-
-    this.objects = [
-      new Ball({ camera, vpX, vpY }),
-      new Colors(),
-    ];
+    //new Ball({ camera, vpX, vpY }), 
+    this.objects = [new Colors()];
   }
 
   animate(deltaTime) {
-    this.objects.forEach(obj => {
+    this.objects.forEach((obj) => {
       //obj.x += 1;
       obj.steps = 10;
-      obj.animate({ ctx: this.ctx });
+      obj.animate({
+        ctx: this.ctx,
+        camera: this.camera,
+        vpX: this.vpX,
+        vpY: this.vpY,
+      });
     });
   }
 }
