@@ -6,6 +6,8 @@ import homepageAnimations from "./pages/homepage-animations";
 import Books from "./pages/Books/Books";
 import React from "react";
 import LambertaPetersRoutes from "./pages/books-animations/lamberta-peters/LambertaPetersRoutes";
+import ThreejsAnimationsPage, { threejsAnimations } from "./pages/threejs-animations/ThreejsAnimationsPage";
+
 
 const {
   BouncingBall,
@@ -63,6 +65,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/books-animations" element={<Books />} />
+          <Route path="/threejs-animations" element={<ThreejsAnimationsPage />} />
 
           {LambertaPetersRoutes()}
 
@@ -70,6 +73,13 @@ function App() {
             const Page = anim.component;
             return (
               <Route key={anim.id} path={`/${anim.id}`} element={<Page />} />
+            );
+          })}
+
+          {threejsAnimations.map((anim) => {
+            const Page = anim.component;
+            return (
+              <Route key={anim.id} path={`threejs-animations/${anim.id}`} element={<Page />} />
             );
           })}
         </Routes>

@@ -1,19 +1,17 @@
-import { animations } from "../../App";
-import { Link } from "react-router-dom";
-import styles from "./Index.module.scss";
-import GithubIcon from "./GithubIcon";
-import Books from "../Books/Books";
+import React from 'react'
+import styles from "./AnimationsGrid.module.scss";
+import { Link } from 'react-router-dom';
+import GithubIcon from '@/pages/Index/GithubIcon';
 
-function Index() {
+function AnimationsGrid({ animations = [], folder = "" }) {
   return (
-    <div>
-      <div className={styles.grid}>
+    <div className={styles.grid}>
         {animations.map((el) => (
           <div key={el.id} className={styles.card}>
             <Link to={el.id} className={styles.link}>
               <div className={styles.videoWrapper}>
                 <video
-                  src={`videos/animations/${el.id}.mp4`}
+                  src={`videos/animations/${folder}/${el.id}.mp4`}
                   autoPlay
                   muted
                   loop
@@ -26,7 +24,7 @@ function Index() {
             {el?.codeSource && (
               <a
                 className={styles.externalLink}
-                href={`https://github.com/webuxmotion/canvas-portfolio/tree/main/src/pages/homepage-animations/${el.codeSource}`}
+                href={`https://github.com/webuxmotion/canvas-portfolio/tree/main/src/pages/${folder}/${el.codeSource}`}
                 target="_blank"
               >
                 <GithubIcon />
@@ -34,11 +32,8 @@ function Index() {
             )}
           </div>
         ))}
-      </div>
-
-      <Books />
     </div>
-  );
+  )
 }
 
-export default Index;
+export default AnimationsGrid

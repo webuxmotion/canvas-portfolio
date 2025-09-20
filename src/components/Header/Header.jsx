@@ -9,6 +9,7 @@ function Header() {
         <span>by Andrii Pereverziev</span>
       </Link>
       <Link to="/books-animations" className={styles.link}>Books Animations</Link>
+      <Link to="/threejs-animations" className={styles.link}>Threejs Animations</Link>
     </div>
   );
 }
