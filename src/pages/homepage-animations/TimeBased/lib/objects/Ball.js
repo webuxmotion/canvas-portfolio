@@ -32,7 +32,7 @@ export class Ball {
       }
     });
 
-    if (tPoints.length === this.steps) {
+    if (tPoints.length == this.steps) {
       tPoints.forEach((tP) => {
         const pp = projectPoint(tP, this.camera, this.vpX, this.vpY);
 
@@ -47,8 +47,6 @@ export class Ball {
 
   draw({ ctx }) {
     ctx.beginPath();
-
-    console.log(this.color);
     if (this.objects.length > 0) {
       ctx.moveTo(this.objects[0].x2d, this.objects[0].y2d);
       for (let i = 1; i < this.objects.length; i++) {
@@ -59,7 +57,6 @@ export class Ball {
       ctx.fillStyle = this.color;
 
       ctx.fill();
-      ctx.stroke();
     }
   }
 

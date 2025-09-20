@@ -16,7 +16,7 @@ export class Spring {
   animate(deltaTime) {
     this.objects.forEach((obj) => {
       //obj.x += 1;
-      obj.steps = 10;
+      
       obj.animate({
         ctx: this.ctx,
         camera: this.camera,
